@@ -3,7 +3,17 @@ Quick code for captioning videos
 
 This snippet uses code from MoviePy but removes the ImageMagick dependency!
 
+## Installation
+
+`pip install moviepy numpy pillow`
+
+## Code snippet
+
 ```
+from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
+from PIL import Image, ImageDraw, ImageFont
+import numpy as np
+
 # load the video file
 test_caps = [
     {"text": "Caption 1 testing the captioning capabilities", "start": 0, "end": 4},
